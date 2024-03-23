@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     
+</head>
+<h1 align="center">Nguyễn Quang Chinh Chiến </h1>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <body ng-app="myapp">
+    <div ng-controller="myctrl">
+      <table class="table table-bordered table-condensed">
+        <script>
+            var app=angular.module("myapp",[]);
+            app.controller("myctrl", function($scope){
+                // Cung cấp thông tin sinh viên ở đây
+                $scope.students=[
+                {
+                    fullname: "Nguyễn Văn Tèo",
+                    birthday: "20-01-1995",
+                    gender: "Nam",
+                    photo: "1001.jpg",
+                    mark: 8.5,
+                },
+                {
+                    fullname: "Nguyễn Quang Chinh Chiến",
+                    birthday: "17-11-2004",
+                    gender: "Nam",
+                    photo: "1031.jpg",
+                    mark: 9,
+                },
+                {
+                    fullname: "Nguyễn Thị Khánh Huyền",
+                    birthday: "17-05-2007",
+                    gender: "Nữ",
+                    photo: "1011.jpg",
+                    mark: 10,
+                },
+                {
+                    fullname: "Nguyễn Thị Khang",
+                    birthday: "23-10-1981",
+                    gender: "Nữ",
+                    photo: "1111.jpg",
+                    mark: 100,
+                }
+            ];
+        });
+        </script>
+        <tr align="center">
+            <th>Avatar</th>
+            <th>Họ và tên</th>
+            <th>Ngày sinh</th>
+            <th>Giới tính</th>
+            <th>Điểm</th>
+        </tr>
+        <tr align="center">
+            <td><img src="images/products/{{students[0].photo}}" width="100px"></td>
+            <td>{{students[0].fullname}}</td>
+            <td>{{students[0].birthday}}</td>
+            <td>{{students[0].gender}}</td>
+            <td>{{students[0].mark}}</td>
+        </tr>
+        <tr align="center">
+            <td><img src="images/products/{{students[1].photo}}" width="100px"></td>
+            <td>{{students[1].fullname}}</td>
+            <td>{{students[1].birthday}}</td>
+            <td>{{students[1].gender}}</td>
+            <td>{{students[1].mark}}</td>
+        </tr>
+        <tr align="center">
+            <td><img src="images/products/{{students[2].photo}}" width="100px"></td>
+            <td>{{students[2].fullname}}</td>
+            <td>{{students[2].birthday}}</td>
+            <td>{{students[2].gender}}</td>
+            <td>{{students[2].mark}}</td>
+        </tr>
+        <tr align="center">
+            <td><img src="images/products/{{students[3].photo}}" width="100px"></td>
+            <td>{{students[3].fullname}}</td>
+            <td>{{students[3].birthday}}</td>
+            <td>{{students[3].gender}}</td>
+            <td>{{students[3].mark}}</td>
+        </tr>
+      </table>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script> 
+</body>
+</html>
