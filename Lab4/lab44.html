@@ -24,13 +24,36 @@
             <label>Chiều rộng</label>
             <input ng-model="width" class="form-control">
         </div>
+
+        <!-- Tổng -->
+        <div class="form-group">
+          <label>Tổng</label>
+          <input value="{{total}}" class="form-control alert-info">
+      </div>
+      <!-- Hiệu -->
+      <div class="form-group">
+        <label>Hiệu</label>
+        <input value="{{brand}}" class="form-control alert-info">
+    </div>
+     <!-- Nhân  -->
+    <div class="form-group">
+      <label>Nhân</label>
+      <input value="{{Multiplication}}" class="form-control alert-info">
+  </div>
+      <!-- Chia -->
+  <div class="form-group">
+    <label>Chia</label>
+    <input value="{{Division}}" class="form-control alert-info">
+</div>
+    <!-- Chu vi -->
+        <div class="form-group">
+          <label>Chu vi</label>
+          <input value="{{perimeter}}" class="form-control alert-info">
+      </div>
+      <!-- Diện tích -->
         <div class="form-group">
             <label>Diện tích</label>
             <input value="{{acreage}}" class="form-control alert-info">
-        </div>
-        <div class="form-group">
-            <label>Chu vi</label>
-            <input value="{{perimeter}}" class="form-control alert-info">
         </div>
         <hr>
         <div class="form-group">
@@ -42,10 +65,14 @@
             var app=angular.module("myapp",[]);
             app.controller("myctrl", function($scope){
                 $scope.calculate = function calculate() {
-                    var a = parseFloat($scope.width);
-                    var b = parseFloat($scope.height);
+                    var a = parseFloat($scope.height);
+                    var b = parseFloat($scope.width);
                     $scope.acreage = a * b;
                     $scope.perimeter = ( a + b ) * 2;
+                    $scope.total = a + b;
+                    $scope.brand = a - b;
+                    $scope.Multiplication = a * b;
+                    $scope.Division  = a / b;
                 }
             });
         </script>

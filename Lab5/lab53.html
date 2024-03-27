@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+  <body>
+    <div  ng-app="myapp" ng-controller="myctrl">
+      <table class="table">
+        <thead>
+            <tr>
+                <th>Ho ten</th>
+                <th>Ngay sinh</th>
+                <th>Photo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row">{{student[0].fullname}}</td>
+                <td>{{student[0].ngaysinh}}</td>
+                <td><img src="{{student[0].photo}}" width="70px"></td>
+            </tr>
+            <tr>
+                <td scope="row">{{student[1].fullname}}</td>
+                <td>{{student[1].ngaysinh}}</td>
+                <td><img src="{{student[1].photo}}" width="70px"></td>
+            </tr>
+            <tr>
+                <td scope="row">{{student[2].fullname}}</td>
+                <td>{{student[2].ngaysinh}}</td>
+                <td><img src="{{student[2].photo}}" width="70px"></td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+    <script>
+        angular.module("myapp",[]).controller("myctrl",function($scope){
+            $scope.student = [
+                {
+                fullname : "Tran Van B",
+                ngaysinh : "01/01/1001",
+                photo : "./images/products/1001.jpg"
+                },
+                {
+                fullname : "Vu Van C",
+                ngaysinh : "02/02/2002",
+                photo : "./images/products/1002.jpg"
+                },
+                {
+                fullname : "Do Thi D",
+                ngaysinh : "03/03/3003",
+                photo : "./images/products/1003.jpg"
+                },
+            ];
+        });
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
