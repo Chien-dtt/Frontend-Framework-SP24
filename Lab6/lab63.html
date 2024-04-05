@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container " text-center  ng-app="myapp" ng-controller="myctrl">
+
+        <form action="" name="frm" >
+            <div class="card-columns" >
+                <div class="card">
+                    
+                    <div class="card-body">
+                        <h4 class="card-title"></h4>
+                        <div class="panel panel-default">
+                            <div class="panel-header">
+                                <h2 style="color: blue;">Thong tin Sinh Vien</h2>
+                            </div>
+                            <div class="panel-body">
+
+                                <!-- ten -->
+                                <div class="form-group">
+                                    <label for=""><b>Ho Va Ten</b></label>
+                                    <input type="text" class="form-control" ng-model="fullname" name="txtFullname" id="" aria-describedby="helpId"
+                                        placeholder="Nhap Ho Va Ten" required maxlength="25">
+
+
+                                        <span ng-hide="frm.txtFullname.$valid" style="color: red;">
+                                        <i>Ten Kh Dc De Trong  </i>  
+                                        </span>
+
+                                </div>
+
+
+                                <!-- Diem -->
+                                <div class="form-group">
+                                    <label for=""><b>Diem</b></label>
+                                    <input type="number" class="form-control"ng-model="fulldiem" name="txtFulldiem" id="" aria-describedby="helpId"
+                                        placeholder="Nhap Diem"  required min="0" max="10">
+                                        <span ng-hide="frm.txtFulldiem.$valid" style="color: red;">
+                                          <i> Diem Kh Dc De Trong [0-10] </i> 
+                                            </span>
+
+                                </div>
+
+                                <!-- Email -->
+                                <div class="form-group">
+                                    <label for=""><b>Email</b></label>
+                                    <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  class="form-control"ng-model="fullemail" name="txtFullemail" id="" aria-describedby="helpId"
+                                        placeholder="Nhap Email " required>
+                                        
+                                        <span ng-hide="frm.txtFullemail.$valid" style="color: red;">
+                                            <i>Email Kh Dung </i>  
+                                            </span>
+                                </div>
+
+
+                                <!-- So Xe< -->
+                                <div class="form-group">
+                                    <label for=""><b>So Xe</b></label>
+                                    <input type="text" class="form-control"ng-model="fullsoxe" name="txtFullsoxe" id="" aria-describedby="helpId"
+                                        placeholder="Nhap So Xe " required>
+
+                                        <span ng-hide="frm.txtFullsoxe.$valid" style="color: red;">
+                                            <i>So Xe Kh Dc De Trong</i>    
+                                            </span>
+
+                                </div>
+                                
+                                <button type="button" name="" id="" class="btn btn-primary" >Luu</button>
+
+                            </div>
+                            <div class="panel-footer"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </form>
+
+        <span ng-hide="frm.$invalid" style="color:blue;">
+            <i>Form Hop Le</i>    
+            </span>
+    </div>
+
+    <script>
+        var app = angular.module("myapp", []);
+        app.controller("myctrl", function ($scope) {
+
+        });
+    </script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
