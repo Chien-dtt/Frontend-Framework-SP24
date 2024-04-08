@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+  <body>
+      <div ng-controller="ProductController">
+            <h2>Danh sach san pham</h2>
+            <ul>
+                <li ng-repeat="product in products">
+                    <strong>ID</strong>{{product.pid}} <br>
+                    <strong>Name</strong>{{product.name}} <br>
+                    <strong>Price</strong>{{product.price}} <br>
+                    <strong>Description</strong>{{product.description}} <br>
+                    <button ng-click="editProduct(product)">Edit</button>
+                    <button ng-click="deleteProduct(product)">Delete</button>
+                    <hr>
+                </li>
+            </ul>
+            <h2>Them / sua san pham</h2>
+            <form ng-submit="saveProduct()">
+                <label for="name">Name</label>
+                <input type="text" id="name" ng-model="product.name" required><br><br>
+
+                <label for="price">Price</label>
+                <input type="text" id="price" ng-model="product.price" required><br><br>
+
+                <label for="description">Description</label>
+                <input type="text" id="description" ng-model="product.description" required><br><br>
+
+                <button type="submit">Save product</button>
+            </form>
+            <p>{{message}}</p>
+      </div>
+      <script>
+        var app=angular.module('myApp',[]);
+        app.controller('ProductController',function($scope,$http){
+            $scope.products=[];
+            $scope.product={};
+            $scope.message='';
+
+            // Lay tat ca san pham
+            $scope.getAllProducts = function(){
+                $http({
+                    method:'GET',
+                    url:'http://192.168.1.9/aapi/read_prd.php'
+                }).then(function(response){
+                    $scope.products=response.data;
+                },function(error){
+                    console.error("Co loi".error);
+                });
+            };
+            
+            $scope.getAllProducts();
+            //Luu san pham
+            $scope.saveProduct=function(){
+                if ($scope.product.pid) {
+                    //update
+                    $http({
+                        method:'POST',
+                        url:'http://192.168.1.9/aapi/update_prd.php',
+                        headers:{
+                            'Content-Type' : 'application/x-www-form-urlencoded'
+                        },
+                        data: 'pid='+$scope.product.pid+
+                        '&name='+$scope.product.name+
+                        '&price='+$scope.product.price+
+                        '&description='+$scope.product.description+
+                    }).then(function(response){
+                        $scope.message=response.data;
+                        $scope.getAllProducts();
+                    }),function(error){
+                        console.error("Loi: "+error);
+                        $scope.message=error;
+                    };
+                }
+                else{
+                    //truong hop them moi san pham
+                    $http({
+                        method:'POST',
+                        headers:{
+                            'Content-Type' : 'application/x-www-form-urlencoded'
+                        },
+                        data: 'pid='+$scope.product.pid+
+                        '&name='+$scope.product.name+
+                        '&price='+$scope.product.price+
+                        '&description='+$scope.product.description+
+                    }).then(function(response){
+                        $scope.message=response.data;
+                        $scope.getAllProducts();
+                    }),function(error){
+                        console.error("Loi: "+error);
+                        $scope.message=error;
+                    };
+                }
+            };
+            $scope.editProduct=function(product){
+                $scope.product=angular.copy(product);
+            };
+            $scope.deleteProduct=function(product){
+                var confirmDelete=confirm('Ban co chac muon xoa kohng?');
+                if (confirmDelete) {
+                    //update
+                    $http({
+                        method:'POST',
+                        url:'http://192.168.1.9/aapi/delete_prd.php',
+                        headers:{
+                            'Content-Type' : 'application/x-www-form-urlencoded'
+                        },
+                        data: 'pid='+product.pid
+                    }).then(function(response){
+                        $scope.message=response.data;
+                        $scope.getAllProducts();
+                    }),function(error){
+                        console.error("Loi: "+error);
+                        $scope.message=error;
+                    };
+            });
+      </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+{
+  "sanPham": [
+    {
+      "id": "SP01",
+      "tenSP": "Áo Polo ICONDENIM Embroider Teddy",
+      "img": "https://product.hstatic.net/1000253775/product/160_polo_2m_97-1_a217b8e7a31e4d57af8960f7e23cfab2_master.jpg",
+      "loaiSP": "Áo",
+      "gia": "350.002"
+    },
+    {
+      "id": "SP02",
+      "img": "https://product.hstatic.net/1000253775/product/160_quan_short_2m_134-6_782f2444d7164b3ab0b4bd82d8b9623c_master.jpg",
+      "tenSP": "Quần Short Pique ICONDENIM Signature Pattern Side Stripe",
+      "loaiSP": "Quần",
+      "gia": "300.000",
+      "mauSac": "",
+      "kichThuoc": ""
+    },
+    {
+      "id": "SP03",
+      "img": "https://product.hstatic.net/1000253775/product/z4416858784545_2ed4a32bff1fde20c47955e2d6d955f9_41a647e42e0548948bfdf84aae03985f_master.jpg",
+      "tenSP": "Quần Short Jeans ICONDENIM W Details",
+      "loaiSP": "Quần",
+      "gia": "350.000",
+      "mauSac": "",
+      "kichThuoc": ""
+    },
+    {
+      "id": "SP04",
+      "img": "https://product.hstatic.net/1000253775/product/z4400377805040_a5b85aa29ad359c762b25ee5a8270140_c14ac498a9444cf0aae5d1efc508988e_master.jpg",
+      "tenSP": "Áo Thun Premium Cotton ICONDENIM Basic",
+      "loaiSP": "Áo",
+      "gia": "200.000",
+      "mauSac": "",
+      "kichThuoc": ""
+    },
+    {
+      "tenSP": "Quần Jeans ICONDENIM Skinny Grey Wash",
+      "img": "https://product.hstatic.net/1000253775/product/z4400393705546_031d6123674a253220ef669059a774f8_bee087d8bd2845e6878c3259db7b5c3d_master.jpg",
+      "loaiSP": "Quần",
+      "gia": "550.001",
+      "id": "SP05"
+    },
+    {
+      "id": "SP06",
+      "img": "https://product.hstatic.net/1000253775/product/z4416858726337_43aaaacffc4420736ce0637c997cdb73_189068f75b6542e8af28ba144e5e942e_master.jpg",
+      "tenSP": "Quần Short Jeans ICONDENIM Light Blue Form Slim",
+      "loaiSP": "Quần",
+      "gia": "300.000",
+      "mauSac": "",
+      "kichThuoc": ""
+    },
+    {
+      "id": "SP07",
+      "img": "https://product.hstatic.net/1000253775/product/z4400392247147_72bd74aa521d76bef23c47b3891d030d_ab9d26fece604a1b9c05b5da4e36e202_master.jpg",
+      "tenSP": "Áo Polo ICONDENIM Logo Printed",
+      "loaiSP": "Áo",
+      "gia": "300.000",
+      "mauSac": "",
+      "kichThuoc": ""
+    },
+    {
+      "id": "SP08",
+      "img": "https://product.hstatic.net/1000253775/product/img_4194_9f26d1e061be4788a85c34b45795e5d7_master.jpg",
+      "tenSP": "Set Đồ ICONDENIM Typing University",
+      "loaiSP": "Quần",
+      "gia": "300.000",
+      "mauSac": "",
+      "kichThuoc": ""
+    },
+    {
+      "id": "SP09",
+      "img": "https://product.hstatic.net/1000253775/product/img_1385_81d7559389b64e87b530b8c6a6b541e3_master.jpg",
+      "tenSP": "Áo Sơmi Caro ICONDENIM Juvenile SS22",
+      "loaiSP": "Quần",
+      "gia": "300.000",
+      "mauSac": "",
+      "kichThuoc": ""
+    },
+    {
+      "id": "SP10",
+      "img": "https://product.hstatic.net/1000253775/product/img_7790_f2d3746e430d4ba2a4539a8e5f2b37f0_master.jpg",
+      "tenSP": "Áo Polo Họa Tiết ICONDENIM",
+      "loaiSP": "New",
+      "gia": "300.000",
+      "mauSac": "",
+      "kichThuoc": ""
+    },
+    {
+      "tenSP": "Áo Sơmi Oxford Cross-Text Layout Cat",
+      "img": "https://product.hstatic.net/1000253775/product/z4417750043159_0876e0b50e4356bc2d123259d81970bb_372ce77fac464214b1ff0610e92fa7cd_grande.jpg",
+      "loaiSP": "Áo",
+      "gia": "330.000",
+      "id": "HMO8N3S"
+    },
+    {
+      "tenSP": "Áo Khoác Denim ICONDENIM Basic",
+      "img": "https://product.hstatic.net/1000253775/product/160_ao_khoac_jean_110-4_e6f9262da2af4e4ab8eab71daa3adece_grande.jpg",
+      "loaiSP": "Áo",
+      "gia": "550.000",
+      "id": "YBWpWbe"
+    }
+  ],
+  "account": [
+    {
+      "id": "1",
+      "name": "Nguyễn Văn Trường",
+      "username": "admin",
+      "password": "123"
+    },
+    {
+      "name": "Tâm",
+      "username": "tam",
+      "password": "123",
+      "id": "RHZtZo4"
+    }
+  ]
+}

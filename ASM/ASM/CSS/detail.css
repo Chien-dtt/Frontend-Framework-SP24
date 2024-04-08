@@ -1,0 +1,90 @@
+/* body {
+  background-color: beige;
+} */
+.timKiem {
+  width: 699px;
+  background-color: aliceblue;
+}
+.formDangNhap {
+  width: 400px;
+}
+tr > td {
+  border: 5px aliceblue solid;
+  border-radius: 5px 5px;
+  background-color: aliceblue;
+  margin: 10px 10px;
+}
+.col-md-6 {
+  margin: 10px 10px;
+  border: 1px aliceblue solid;
+  border-radius: 5px 5px;
+  background-color: aliceblue;
+}
+.linkSP > p > a {
+  text-decoration: none;
+  color: black;
+}
+.col-md-5 > .col-md-12 {
+  margin: 10px 10px;
+}
+.listIMG {
+  display: flex;
+}
+.chiTietSP {
+  display: flex;
+}
+.ctKhuyenMai {
+  display: flex;
+  margin: 10px 10px;
+}
+.khuyenMai {
+  border: 2px dashed red;
+}
+.soLuong {
+  display: flex;
+  width: 100px;
+  height: 50px;
+}
+.themGH {
+  display: flex;
+  margin-top: 15px;
+}
+.btnThem > button {
+  width: 300px;
+  height: 50px;
+  background-color: red;
+  margin-right: 10px;
+  margin-left: 80px;
+  color: aliceblue;
+}
+.btnThem > button:hover {
+  background-color: aliceblue;
+  color: red;
+}
+.muaNgay > button {
+  width: 300px;
+  height: 50px;
+  background-color: aliceblue;
+  margin-left: 10px;
+  color: red;
+}
+.muaNgay > button:hover {
+  background-color: red;
+  color: aliceblue;
+}
+.navbar {
+  background-color: black;
+}
+.dropdown > .dropdown-menu {
+  display: none;
+}
+.btn-group > button {
+  background-color: aliceblue;
+  color: black;
+}
+.size > a:hover {
+  background-color: red;
+}
+.ttsp {
+  padding-top: 10px;
+}

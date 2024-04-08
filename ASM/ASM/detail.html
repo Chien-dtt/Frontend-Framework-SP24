@@ -1,0 +1,163 @@
+<link rel="stylesheet" href="/CSS/detail.css" />
+<!--End linkSP-->
+<div class="chiTietSP">
+  <div class="col-md-5">
+    <div class="col-md-12">
+      <img src="{{sanPham.img}}" alt="" style="width: 520px; height: 505px" />
+    </div>
+    <!--End col-md-12-->
+    <!-- <div class="col-md-12 listIMG">
+      <div class="col-md-2">
+        <img
+          src="https://product.hstatic.net/1000253775/product/160_polo_2m_97-1_a217b8e7a31e4d57af8960f7e23cfab2_compact.jpg"
+          alt=""
+          style="width: 70.4px; height: 70.4px"
+        />
+      </div>
+     
+      <div class="col-md-2">
+        <img
+          src="https://product.hstatic.net/1000253775/product/160_polo_2m_97-1_a217b8e7a31e4d57af8960f7e23cfab2_compact.jpg"
+          alt=""
+          style="width: 70.4px; height: 70.4px"
+        />
+      </div>
+     
+      <div class="col-md-2">
+        <img
+          src="https://product.hstatic.net/1000253775/product/160_polo_2m_97-1_a217b8e7a31e4d57af8960f7e23cfab2_compact.jpg"
+          alt=""
+          style="width: 70.4px; height: 70.4px"
+        />
+      </div>
+     
+      <div class="col-md-2">
+        <img
+          src="https://product.hstatic.net/1000253775/product/160_polo_2m_97-1_a217b8e7a31e4d57af8960f7e23cfab2_compact.jpg"
+          alt=""
+          style="width: 70.4px; height: 70.4px"
+        />
+      </div>
+     
+      <div class="col-md-2">
+        <img
+          src="https://product.hstatic.net/1000253775/product/160_polo_2m_97-1_a217b8e7a31e4d57af8960f7e23cfab2_compact.jpg"
+          alt=""
+          style="width: 70.4px; height: 70.4px"
+        />
+      </div>
+     
+      <div class="col-md-2">
+        <img
+          src="https://product.hstatic.net/1000253775/product/160_polo_2m_97-1_a217b8e7a31e4d57af8960f7e23cfab2_compact.jpg"
+          alt=""
+          style="width: 70.4px; height: 70.4px"
+        />
+      </div>
+     
+    </div> -->
+    <!--End col-md-12-->
+  </div>
+  <!--End col-md5-->
+  <div class="col-md-7">
+    <div class="ttsp">
+      <h1>{{sanPham.tenSP}}</h1>
+      <p>Loại sản phẩm: {{sanPham.loaiSP}}</p>
+      <p style="color: red">
+        <b>{{sanPham.gia}}<u>đ</u></b>
+      </p>
+    </div>
+    <!--End ttsp-->
+    <div class="khuyenMai">
+      <h1>MUA NHIỀU GIẢM NHIỀU</h1>
+      <div class="ctKhuyenMai">
+        <img
+          src="https://theme.hstatic.net/1000253775/1001045509/14/5_large.jpg?v=1372"
+          alt=""
+          style="width: 112px; height: auto"
+        />
+        <p>Giảm thêm 5% khi mua 2 sản phẩm</p>
+      </div>
+      <!--End ctKhuyenMai-->
+    </div>
+    <!--End khuyenMai-->
+    <div class="mauSac">
+      <p>Màu sắc: <b ng-model="mauSac"></b></p>
+      <div class="ctMauSac">
+        <button type="button" class="btn btn-outline-secondary">
+          <img src="" alt="" style="width: 50px; height: 50px" />
+        </button>
+        <button type="button" class="btn btn-outline-secondary">
+          <img src="" alt="" style="width: 50px; height: 50px" />
+        </button>
+      </div>
+      <!--End ctMauSac-->
+    </div>
+    <!--End mauSac-->
+    <div class="size">
+      <p>Kích thước: <b>{{size}}</b></p>
+      <!-- <button
+        type="button"
+        class="btn btn-outline-secondary"
+        style="width: 40px; height: 40px"
+      >
+        <p>S</p>
+      </button> -->
+      <a href="" class="btn btn-secondary" ng-click="sizeS()">S</a>
+      <a href="" class="btn btn-secondary" ng-click="sizeM()">M</a>
+      <a href="" class="btn btn-secondary" ng-click="sizeL()">L</a>
+      <a href="" class="btn btn-secondary" ng-click="sizeXL()">XL</a>
+      <!-- <button
+        type="button"
+        class="btn btn-outline-secondary"
+        style="width: 40px; height: 40px"
+      >
+        <p>M</p>
+      </button>
+      <button
+        type="button"
+        class="btn btn-outline-secondary"
+        style="width: 40px; height: 40px"
+      >
+        <p>L</p>
+      </button>
+      <button
+        type="button"
+        class="btn btn-outline-secondary"
+        style="width: 40px; height: 40px"
+      >
+        <p>XL</p>
+      </button> -->
+    </div>
+    <!--End size-->
+    <div class="themGH">
+      <!--soLuong-->
+      <div class="soLuong">
+        <div class="btn-group" role="group" aria-label="Basic outlined example">
+          <button type="button" class="btn btn-secondary" ng-click="giam()">
+            -
+          </button>
+          <button type="button" class="btn btn-secondary">{{count}}</button>
+          <button type="button" class="btn btn-secondary" ng-click="them()">
+            +
+          </button>
+        </div>
+      </div>
+      <!--End soLuong-->
+      <div class="btnThem">
+        <button type="button">
+          <b>Thêm vào giỏ</b>
+        </button>
+      </div>
+      <!--End btnThem-->
+      <div class="muaNgay">
+        <button type="button">
+          <b>Mua ngay</b>
+        </button>
+      </div>
+    </div>
+    <!--End themGH-->
+  </div>
+  <!--End col-md-7-->
+</div>
+<!--End chiTietSP-->

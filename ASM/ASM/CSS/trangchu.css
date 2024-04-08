@@ -1,0 +1,11 @@
+.parent > .child:nth-child(n + 9) {
+  display: none;
+}
+.tenSP {
+  color: black;
+  text-decoration: none;
+}
+.gia {
+  color: red;
+  text-decoration: none;
+}

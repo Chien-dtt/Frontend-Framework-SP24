@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/CSS/best.css" />
+<div
+  ng-include="'/BANNER/bannerbest.html'"
+  style="margin-top: 15px; margin-bottom: 15px"
+></div>
+<!--Row-->
+<div class="row">
+  <div
+    class="col-md-3"
+    ng-repeat="sanPham in listBest"
+    style="margin-bottom: 15px"
+  >
+    <a href="#detail/{{sanPham.id}}">
+      <div class="card" style="width: 18rem">
+        <img src="{{sanPham.img}}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <p class="card-title tenSP">{{sanPham.tenSP}}</p>
+          <p class="card-text gia">{{sanPham.gia}}</p>
+          <a href="#"><i class="bi bi-bag-plus-fill"></i></a>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+<!--End Row-->

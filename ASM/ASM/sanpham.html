@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="/CSS/sanpham.css" />
+<!--Row-->
+<div class="row">
+  <div
+    class="col-md-3"
+    ng-repeat="sanPham in listSanPham"
+    style="margin-bottom: 15px"
+  >
+    <a href="#detail/{{sanPham.id}}">
+      <div class="card" style="width: 18rem">
+        <img src="{{sanPham.img}}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <p class="card-title tenSP">{{sanPham.tenSP}}</p>
+          <p class="card-text gia">{{sanPham.gia}}<b>đ</b></p>
+          <a href="#"><i class="bi bi-bag-plus-fill"></i></a>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+<!--End Row-->
